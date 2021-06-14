@@ -10,9 +10,7 @@ import com.avs.portal.entity.User;
 public interface UserRepository extends JpaRepository<User, UUID> {
 
 	List<User> findAll();
-<<<<<<< HEAD
-=======
 	
 	List<User> findByEmailOrPhone(String email, Long phone);
->>>>>>> b030e04... initial commit
+
 }

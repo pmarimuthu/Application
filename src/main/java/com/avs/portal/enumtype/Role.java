@@ -10,10 +10,7 @@ public enum Role {
         this.label = label;
     }
 
-<<<<<<< HEAD
-=======
     @Override
->>>>>>> b030e04... initial commit
     public String toString() {
         return this.label;
     }

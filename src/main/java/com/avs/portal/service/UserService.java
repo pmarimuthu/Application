@@ -40,25 +40,12 @@ public class UserService {
 		user.setUpdatedOn(new Date(new java.util.Date().getTime()));
 		
 		if(bean.getReferredBy() != null) {
-<<<<<<< HEAD
-			System.err.println("Given bean.getReferredBy() : " + bean.getReferredBy());
-			User referredBy = userRepository.getById(bean.getReferredBy().getId());
-			user.setReferredBy(referredBy);
-			System.err.println("ReferredBy: " + referredBy.getEmail());
-		}
-		
-		user = userRepository.save(user);
-		
-		UserAccount userAccount = userAccountRepository.save(new UserAccount(user.getId(), user.getId().toString()));
-		System.err.println("Account: " + userAccount.getUser().toString());
-=======
 			User referredBy = userRepository.getById(bean.getReferredBy().getId());
 			user.setReferredBy(referredBy);
 		}
 		
 		user = userRepository.save(user);
 		userAccountRepository.save(new UserAccount(user.getId(), user.getId().toString()));
->>>>>>> b030e04... initial commit
 		
 		return listUsers();
 	}
@@ -76,15 +63,8 @@ public class UserService {
 		user.setUpdatedOn(new Date(new java.util.Date().getTime()));
 		
 		if(bean.getReferredBy() != null) {
-<<<<<<< HEAD
-			System.err.println("To Update bean.getReferredBy() : " + bean.getReferredBy());
 			User referredBy = userRepository.getById(bean.getReferredBy().getId());
 			user.setReferredBy(referredBy);
-			System.err.println("Updated ReferredBy: " + referredBy.getEmail());
-=======
-			User referredBy = userRepository.getById(bean.getReferredBy().getId());
-			user.setReferredBy(referredBy);
->>>>>>> b030e04... initial commit
 		}
 		
 		user = userRepository.save(user);		

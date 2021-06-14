@@ -26,19 +26,11 @@ public class UserController {
 	
 	@PostMapping(path = "/add")
 	public List<UserBean> addUser(@RequestBody UserBean bean) {
-<<<<<<< HEAD
-		System.err.println(bean.toString());
-=======
->>>>>>> b030e04... initial commit
 		return userService.create(bean);
 	}
 	
 	@PostMapping(path = "/edit")
 	public List<UserBean> editUser(@RequestBody UserBean bean) {
-<<<<<<< HEAD
-		System.err.println(bean.toString());
-=======
->>>>>>> b030e04... initial commit
 		return userService.update(bean);
 	}
 

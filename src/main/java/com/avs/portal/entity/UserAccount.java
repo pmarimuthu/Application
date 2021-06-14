@@ -8,22 +8,15 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-<<<<<<< HEAD
-=======
 import com.avs.portal.bean.UserAccountBean;
 
->>>>>>> b030e04... initial commit
 @Entity
 @Table(schema = "AVSPORTAL", name = "USER_ACCOUNT")
 public class UserAccount {
 
 	@Id
 	@Column(name = "ID", updatable = false, nullable = false)
-<<<<<<< HEAD
-	private UUID user;
-=======
 	private UUID id;
->>>>>>> b030e04... initial commit
 
 	@Column(name = "PASSWORD", nullable = false)
 	private String password;
@@ -44,19 +37,6 @@ public class UserAccount {
 		
 	}
 	
-<<<<<<< HEAD
-	public UserAccount(UUID user, String initialPassword) {
-		this.user = user;
-		this.password = initialPassword;
-	}
-
-	public UUID getUser() {
-		return user;
-	}
-
-	public void setUser(UUID user) {
-		this.user = user;
-=======
 	public UserAccount(UUID id, String initialPassword) {
 		this.id = id;
 		this.password = initialPassword;
@@ -68,7 +48,6 @@ public class UserAccount {
 
 	public void setId(UUID id) {
 		this.id = id;
->>>>>>> b030e04... initial commit
 	}
 
 	public String getPassword() {
@@ -111,9 +90,6 @@ public class UserAccount {
 		this.updatedOn = updatedOn;
 	}
 
-<<<<<<< HEAD
-	
-=======
 	public UserAccountBean toBean() {
 		UserAccountBean bean = new UserAccountBean();
 		bean.setId(id);
@@ -125,5 +101,5 @@ public class UserAccount {
 		
 		return bean;
 	}
->>>>>>> b030e04... initial commit
+
 }
