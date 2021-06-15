@@ -45,6 +45,9 @@ public class User {
 	@Column(name = "LAST_LOGIN_ON")
 	private Timestamp lastLoginOn;
 	
+	@Column(name = "CREATED_ON")
+	private Timestamp createdOn;
+	
 	@Column(name = "UPDATED_ON")
 	private Date updatedOn;
 
@@ -96,6 +99,14 @@ public class User {
 		this.lastLoginOn = lastLoginOn;
 	}
 
+	public Timestamp getCreatedOn() {
+		return createdOn;
+	}
+
+	public void setCreatedOn(Timestamp createdOn) {
+		this.createdOn = createdOn;
+	}
+
 	public Date getUpdatedOn() {
 		return updatedOn;
 	}
@@ -115,6 +126,7 @@ public class User {
 			bean.setReferredBy(referredBy.toBean());
 		
 		bean.setLastLoginOn(lastLoginOn);
+		bean.setCreatedOn(createdOn);
 		bean.setUpdatedOn(updatedOn);
 		
 		return bean;

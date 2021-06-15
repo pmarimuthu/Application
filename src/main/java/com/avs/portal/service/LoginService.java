@@ -28,7 +28,7 @@ public class LoginService {
 			return loginBean;
 		}
 
-		String code = "XXXX";
+		String code = "XXXX"; // PALV
 
 		List<User> users = userRepository.findByEmailOrPhone(loginBean.getEmail(), loginBean.getPhone());
 		User user = users.stream().findFirst().orElse(null);

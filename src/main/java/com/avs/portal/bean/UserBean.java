@@ -23,6 +23,8 @@ public class UserBean implements Serializable {
 	
 	private Timestamp lastLoginOn;
 	
+	private Timestamp createdOn;
+	
 	private Date updatedOn;
 	
 	public UserBean() {
@@ -81,6 +83,14 @@ public class UserBean implements Serializable {
 		this.lastLoginOn = lastLoginOn;
 	}
 
+	public Timestamp getCreatedOn() {
+		return createdOn;
+	}
+
+	public void setCreatedOn(Timestamp createdOn) {
+		this.createdOn = createdOn;
+	}
+
 	public Date getUpdatedOn() {
 		return updatedOn;
 	}
@@ -91,10 +101,11 @@ public class UserBean implements Serializable {
 
 	@Override
 	public String toString() {
-		return "UserBean [id=" + id + ", email=" + email + ", phone=" + phone + ", role="
-				+ role + ", referredBy=" + referredBy + ", lastLoginOn=" + lastLoginOn + ", updatedOn=" + updatedOn
+		return "UserBean [id=" + id + ", email=" + email + ", phone=" + phone + ", role=" + role + ", referredBy="
+				+ referredBy + ", lastLoginOn=" + lastLoginOn + ", createdOn=" + createdOn + ", updatedOn=" + updatedOn
 				+ "]";
 	}
+
 
 	
 }
